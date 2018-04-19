@@ -20,7 +20,7 @@ export default class People extends Component {
     render() {
         let allPeople = this.state.people.map((person) => {
             return (
-                <div class="card col-md-3 mb-2" style={{ width: "18rem" }}>
+                <div key={person.id} className="card col-md-3 mb-2" style={{ width: "18rem" }}>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">Name: {person.name}</li>
                         <li className="list-group-item">Gender: {person.gender}</li>

@@ -6,7 +6,6 @@ export default class People extends Component {
         super(props);
         this.state = {
             person: {},
-            personFilms: []
         }
     }
 
@@ -22,6 +21,9 @@ export default class People extends Component {
 
     render() {
         let person = this.state.person
+        // let personFilms = person.films.map((film) => {
+        //     return <li> {film} </li>
+        // })
         return (
             <div className="container d-flex justify-content-center">
                 <div className="card" style={{ width: "30rem" }}>
@@ -34,7 +36,6 @@ export default class People extends Component {
                         <li className="list-group-item">Age: {person.age}</li>
                         <li className="list-group-item">Eye Color: {person.eye_color}</li>
                         <li className="list-group-item">Hair Color: {person.hair_color}</li>
-                        <li className="list-group-item">Films: {}</li>
                     </ul>
                     <div className="card-body d-flex justify-content-center">
                         <Link to="/People">Back to People</Link>

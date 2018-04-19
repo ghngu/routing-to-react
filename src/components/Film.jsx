@@ -22,7 +22,7 @@ export default class People extends Component {
     render() {
         let film = this.state.film
         return (
-            <div classNameName="container-fluid">
+            <div className="container-fluid">
                 <div className="card center-text mx-auto" style={{ width: "40rem" }}>
                     <img className="card-img-top w-100" src="https://www.thenewsgeeks.com/wp-content/uploads/2017/06/studio-ghibli-TNG-e1498577006752.jpg" alt="Card cap" />
                     <div className="card-body">
