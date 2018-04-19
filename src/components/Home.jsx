@@ -1,30 +1,18 @@
 import React, { Component } from 'react';
-import Films from './Films';
-import People from './People';
-import 'isomorphic-fetch';
-import 'es6-promise';
+import { Link } from "react-router-dom";
 
 export default class Home extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            films: [],
-            people: []
-        };
-    }
-
-    componentDidMount() {
-        let baseUrl = "https://ghibliapi.herokuapp.com"
-        fetch(`${baseUrl}/films`)
-            .then(res => { return res.json() })
-            .then(films => this.setState({ films }));
-        fetch(`${baseUrl}/people`)
-            .then(res => { return res.json() })
-            .then(people => this.setState({ people }));
-    }
-
     render() {
-        return <h1>Home</h1>
+        return (
+            <div className="container center text">
+                <div className="jumbotron">
+                    <img className="w-100" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1280px-Studio_Ghibli_logo.svg.png" alt="" />
+                </div>
+                <div className="row d-flex justify-content-center">
+                    <Link className="btn btn-primary mr-2" to="/films">Films</Link>
+                    <Link className="btn btn-primary" to="/people">People</Link>
+                </div>
+            </div>
+        )
     }
 }
